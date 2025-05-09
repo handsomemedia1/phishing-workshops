@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 1: Intro to Phishing & AI Tools - Cybersecurity Sensitization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <i class="fas fa-shield-alt"></i> Phishing Defense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aiToolDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            AI Tool
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aiToolDropdown">
+                            <li><a class="dropdown-item" href="/ai-tool/index.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/ai-tool/demo.html">Demo</a></li>
+                            <li><a class="dropdown-item" href="/ai-tool/technical.html">Technical Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="workshopsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Workshops
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workshopsDropdown">
+                            <li><a class="dropdown-item" href="/workshops/index.html">Overview</a></li>
+                            <li><a class="dropdown-item active" href="/workshops/workshop-1.html">Workshop 1: Intro to Phishing</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-2.html">Workshop 2: Linguistic Patterns</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-3.html">Workshop 3: URL Analysis</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-4.html">Workshop 4: Hands-On Lab</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-5.html">Workshop 5: Results & Certification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materials/index.html">Materials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white register-btn" href="#register-modal" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Workshop 1: Introduction to Phishing & AI Tools</h1>
+            <p class="lead">The foundation of phishing awareness and AI-powered detection</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="section-heading">Workshop Overview</h2>
+                        <p>This initial workshop introduces students to the fundamentals of phishing threats and demonstrates our AI tool's capabilities in detecting malicious communications.</p>
+                        
+                        <div class="workshop-meta d-flex align-items-center my-4">
+                            <div class="me-4">
+                                <i class="fas fa-clock"></i> 90 minutes
+                            </div>
+                            <div class="me-4">
+                                <i class="fas fa-graduation-cap"></i> No prerequisites
+                            </div>
+                            <div>
+                                <span class="badge bg-primary">Beginner Level</span>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Learning Objectives</h3>
+                            <p>By the end of this workshop, students will be able to:</p>
+                            <ul>
+                                <li>Define phishing and explain its common variations</li>
+                                <li>Identify the primary motivations behind phishing attacks</li>
+                                <li>Understand how AI tools can assist in phishing detection</li>
+                                <li>Recognize basic indicators of phishing attempts</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Workshop Agenda</h3>
+                            
+                            <div class="agenda-item">
+                                <h4>1. Introduction to Phishing (25 min)</h4>
+                                <ul>
+                                    <li>Definition and history of phishing</li>
+                                    <li>Types of phishing (spear phishing, whaling, smishing, etc.)</li>
+                                    <li>Recent statistics and case studies</li>
+                                    <li>Why phishing remains effective despite awareness</li>
+                                </ul>
+                            </div>
+
+                            <div class="agenda-item">
+                                <h4>2. AI Tool Demonstration (20 min)</h4>
+                                <ul>
+                                    <li>Introduction to our AI detection system (<span class="highlight">94% accuracy</span>)</li>
+                                    <li>Live demonstration analyzing known phishing examples</li>
+                                    <li>Explanation of key indicators the AI identifies</li>
+                                    <li>How machine learning improves detection capabilities</li>
+                                </ul>
+                            </div>
+
+                            <div class="agenda-item">
+                                <h4>3. Interactive Exercise: "Spot the Phish" (25 min)</h4>
+                                <ul>
+                                    <li>Students review sample emails without AI assistance</li>
+                                    <li>Group discussion of suspicious elements</li>
+                                    <li>Run samples through the AI tool</li>
+                                    <li>Compare human vs. AI detection accuracy</li>
+                                </ul>
+                            </div>
+
+                            <div class="agenda-item">
+                                <h4>4. Group Discussion (15 min)</h4>
+                                <ul>
+                                    <li>Why do phishing attacks trick people?</li>
+                                    <li>Psychological tactics used by attackers</li>
+                                    <li>Common misconceptions about phishing</li>
+                                    <li>How AI can complement human judgment</li>
+                                </ul>
+                            </div>
+
+                            <div class="agenda-item">
+                                <h4>5. Assessment & Conclusion (5 min)</h4>
+                                <ul>
+                                    <li>Brief quiz to test understanding</li>
+                                    <li>Preview of Workshop 2: Linguistic Pattern Analysis</li>
+                                    <li>Resources for further learning</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>AI Tool Integration</h3>
+                            <p>During this workshop, students will:</p>
+                            <ul>
+                                <li>Observe the AI tool's <span class="highlight">94% accuracy</span> on test datasets</li>
+                                <li>See how the tool highlights suspicious elements in emails</li>
+                                <li>Understand the basic principles behind AI-powered detection</li>
+                                <li>Learn how to access and use the tool interface</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="/ai-tool/demo.html" class="btn btn-primary">Try the AI Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <div class="content-card text-center">
+                                <h3>Register for Workshop 1</h3>
+                                <p>Join us for this introductory session on phishing detection and AI tools.</p>
+                                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>Workshop Materials</h3>
+                                <ul class="materials-list">
+                                    <li>
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>Instructor Guide</span>
+                                        <a href="/materials/instructor-guides/workshop-1-guide.pdf" class="download-link" target="_blank">
+                                            <i class="fas fa-download"></i> PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-file-pdf"></i>
+                                        <span>Student Handout</span>
+                                        <a href="/materials/student-handouts/workshop-1-handout.pdf" class="download-link" target="_blank">
+                                            <i class="fas fa-download"></i> PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-file-powerpoint"></i>
+                                        <span>Presentation Slides</span>
+                                        <a href="/materials/presentations/workshop-1-slides.pdf" class="download-link" target="_blank">
+                                            <i class="fas fa-download"></i> PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-file-alt"></i>
+                                        <span>Assessment Form</span>
+                                        <a href="/materials/assessments/workshop-1-assessment.pdf" class="download-link" target="_blank">
+                                            <i class="fas fa-download"></i> PDF
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>Workshop Series Navigation</h3>
+                                <div class="workshop-navigation">
+                                    <div class="nav-item current">
+                                        <div class="nav-number">1</div>
+                                        <div class="nav-content">
+                                            <h4>Intro to Phishing</h4>
+                                            <p>You are here</p>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item">
+                                        <div class="nav-number">2</div>
+                                        <div class="nav-content">
+                                            <h4>Linguistic Patterns</h4>
+                                            <a href="/workshops/workshop-2.html">View details →</a>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item">
+                                        <div class="nav-number">3</div>
+                                        <div class="nav-content">
+                                            <h4>URL & Behavioral Analysis</h4>
+                                            <a href="/workshops/workshop-3.html">View details →</a>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item">
+                                        <div class="nav-number">4</div>
+                                        <div class="nav-content">
+                                            <h4>Hands-On Lab</h4>
+                                            <a href="/workshops/workshop-4.html">View details →</a>
+                                        </div>
+                                    </div>
+                                    <div class="nav-item">
+                                        <div class="nav-number">5</div>
+                                        <div class="nav-content">
+                                            <h4>Results & Certification</h4>
+                                            <a href="/workshops/workshop-5.html">View details →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container text-center">
+                <h2>Ready to Start Your Phishing Defense Journey?</h2>
+                <p class="lead">Register for Workshop 1 or the full workshop series</p>
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4><i class="fas fa-shield-alt"></i> Phishing Defense</h4>
+                    <p>Empowering students with AI-powered cybersecurity skills to combat phishing threats.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/ai-tool/index.html">AI Tool</a></li>
+                        <li><a href="/workshops/index.html">Workshops</a></li>
+                        <li><a href="/materials/index.html">Materials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Workshops</h5>
+                    <ul class="footer-links">
+                        <li><a href="/workshops/workshop-1.html">Intro to Phishing</a></li>
+                        <li><a href="/workshops/workshop-2.html">Linguistic Patterns</a></li>
+                        <li><a href="/workshops/workshop-3.html">URL Analysis</a></li>
+                        <li><a href="/workshops/workshop-4.html">Hands-On Lab</a></li>
+                        <li><a href="/workshops/workshop-5.html">Certification</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@phishingdefense.org</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Phishing Defense Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register for Workshops</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registration-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="institution" class="form-label">Institution</label>
+                            <input type="text" class="form-control" id="institution" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Workshops of Interest</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-1" id="workshop1Check" checked>
+                                <label class="form-check-label" for="workshop1Check">
+                                    Workshop 1: Intro to Phishing
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-2" id="workshop2Check">
+                                <label class="form-check-label" for="workshop2Check">
+                                    Workshop 2: Linguistic Patterns
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-3" id="workshop3Check">
+                                <label class="form-check-label" for="workshop3Check">
+                                    Workshop 3: URL & Behavioral Analysis
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-4" id="workshop4Check">
+                                <label class="form-check-label" for="workshop4Check">
+                                    Workshop 4: Hands-On Lab
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-5" id="workshop5Check">
+                                <label class="form-check-label" for="workshop5Check">
+                                    Workshop 5: Results & Certification
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="all-workshops" id="allWorkshopsCheck">
+                                <label class="form-check-label" for="allWorkshopsCheck">
+                                    <strong>Full Workshop Series (all 5)</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional CSS for workshop navigation -->
+    <style>
+        .workshop-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .nav-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        
+        .nav-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .current .nav-number {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .nav-content {
+            flex-grow: 1;
+        }
+        
+        .nav-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .nav-content p, .nav-content a {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+        }
+        
+        .agenda-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .agenda-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .workshop-meta {
+            color: var(--gray);
+        }
+        
+        .workshop-meta i {
+            margin-right: 0.5rem;
+        }
+    </style>
+
+    <!-- Bootstrap and custom JavaScript -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

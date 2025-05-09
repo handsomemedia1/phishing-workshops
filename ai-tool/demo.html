@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phishing Detection Demo - Cybersecurity Sensitization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <i class="fas fa-shield-alt"></i> Phishing Defense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="aiToolDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            AI Tool
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aiToolDropdown">
+                            <li><a class="dropdown-item" href="/ai-tool/index.html">Overview</a></li>
+                            <li><a class="dropdown-item active" href="/ai-tool/demo.html">Demo</a></li>
+                            <li><a class="dropdown-item" href="/ai-tool/technical.html">Technical Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="workshopsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Workshops
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workshopsDropdown">
+                            <li><a class="dropdown-item" href="/workshops/index.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-1.html">Workshop 1: Intro to Phishing</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-2.html">Workshop 2: Linguistic Patterns</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-3.html">Workshop 3: URL Analysis</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-4.html">Workshop 4: Hands-On Lab</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-5.html">Workshop 5: Results & Certification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materials/index.html">Materials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white register-btn" href="#register-modal" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>AI Phishing Detection Demo</h1>
+            <p class="lead">Experience our <span class="highlight">94% accurate</span> phishing detection tool</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center mb-5">
+                        <h2>Try Our Phishing Detection AI</h2>
+                        <p>Submit a suspicious email or URL to see our AI tool in action. This demo showcases the same technology used in our cybersecurity workshops.</p>
+                        <div class="accuracy-badge-large">
+                            <span>94% Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="ai-demo-interface">
+                            <ul class="nav nav-tabs" id="demoTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="email-tab" data-bs-toggle="tab" data-bs-target="#email-analysis" type="button" role="tab" aria-controls="email-analysis" aria-selected="true">
+                                        <i class="fas fa-envelope"></i> Email Analysis
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="url-tab" data-bs-toggle="tab" data-bs-target="#url-analysis" type="button" role="tab" aria-controls="url-analysis" aria-selected="false">
+                                        <i class="fas fa-link"></i> URL Analysis
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="examples-tab" data-bs-toggle="tab" data-bs-target="#examples" type="button" role="tab" aria-controls="examples" aria-selected="false">
+                                        <i class="fas fa-list"></i> Sample Examples
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="demoTabContent">
+                                <div class="tab-pane fade show active" id="email-analysis" role="tabpanel" aria-labelledby="email-tab">
+                                    <div class="demo-tab-content">
+                                        <div class="form-group mb-3">
+                                            <label for="email-input" class="form-label">Enter email text to analyze:</label>
+                                            <textarea class="form-control" id="email-input" rows="10" placeholder="Paste the full email text here, including sender, subject, and body..."></textarea>
+                                        </div>
+                                        <div class="text-center">
+                                            <button id="analyze-email-btn" class="btn btn-primary">
+                                                <i class="fas fa-search"></i> Analyze Email
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="url-analysis" role="tabpanel" aria-labelledby="url-tab">
+                                    <div class="demo-tab-content">
+                                        <div class="form-group mb-3">
+                                            <label for="url-input" class="form-label">Enter URL to analyze:</label>
+                                            <input type="text" class="form-control" id="url-input" placeholder="https://example.com/login">
+                                        </div>
+                                        <div class="text-center">
+                                            <button id="analyze-url-btn" class="btn btn-primary">
+                                                <i class="fas fa-search"></i> Analyze URL
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="examples" role="tabpanel" aria-labelledby="examples-tab">
+                                    <div class="demo-tab-content">
+                                        <h4>Sample Phishing Emails for Testing</h4>
+                                        <p>Click any example to load it into the Email Analysis tab for testing:</p>
+                                        
+                                        <div class="example-list">
+                                            <div class="example-item" data-example="email-1">
+                                                <h5>Bank Account Alert</h5>
+                                                <div class="example-preview">
+                                                    From: security@bankofamerica-secure.com<br>
+                                                    Subject: URGENT: Your Bank of America account has been locked
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary load-example" data-target="email" data-example="email-1">
+                                                    Load Example
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="example-item" data-example="email-2">
+                                                <h5>Password Reset Request</h5>
+                                                <div class="example-preview">
+                                                    From: no-reply@microsoft-verify.net<br>
+                                                    Subject: Your Microsoft password expired - Action Required
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary load-example" data-target="email" data-example="email-2">
+                                                    Load Example
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="example-item" data-example="email-3">
+                                                <h5>Package Delivery Notification</h5>
+                                                <div class="example-preview">
+                                                    From: delivery-notification@fedx.com<br>
+                                                    Subject: Your package is waiting for delivery confirmation
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary load-example" data-target="email" data-example="email-3">
+                                                    Load Example
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <h4 class="mt-4">Sample Suspicious URLs for Testing</h4>
+                                        <div class="example-list">
+                                            <div class="example-item" data-example="url-1">
+                                                <h5>Banking Login Page</h5>
+                                                <div class="example-preview">
+                                                    https://secure-banking.chase-verification.com/login
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary load-example" data-target="url" data-example="url-1">
+                                                    Load Example
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="example-item" data-example="url-2">
+                                                <h5>Document Sharing Link</h5>
+                                                <div class="example-preview">
+                                                    https://bit.ly/3xR8pQ2
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary load-example" data-target="url" data-example="url-2">
+                                                    Load Example
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="example-item" data-example="url-3">
+                                                <h5>Payment Confirmation Page</h5>
+                                                <div class="example-preview">
+                                                    https://paypa1.com/account/login
+                                                </div>
+                                                <button class="btn btn-sm btn-outline-primary load-example" data-target="url" data-example="url-3">
+                                                    Load Example
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-results mt-5">
+                            <!-- Results will be dynamically inserted here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-center mb-4">How It Works</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="how-it-works-item text-center">
+                                    <div class="step-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h3>Advanced AI</h3>
+                                    <p>Our machine learning model analyzes over 200 distinct features of emails and URLs.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="how-it-works-item text-center">
+                                    <div class="step-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h3>94% Accuracy</h3>
+                                    <p>Trained on 250,000+ samples to achieve industry-leading precision in detection.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="how-it-works-item text-center">
+                                    <div class="step-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h3>Real Protection</h3>
+                                    <p>The same technology used in our workshops to train students in phishing defense.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2>Analysis Examples</h2>
+                        <p>Our AI detection system evaluates multiple factors to determine if a message is legitimate or phishing:</p>
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span><strong>Linguistic Patterns:</strong> Urgency language, grammatical errors, threatening tones</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span><strong>URL Analysis:</strong> Domain age, suspicious TLDs, misspelled brand names</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span><strong>Sender Verification:</strong> Email header analysis, domain alignment</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-success"></i>
+                                <span><strong>Social Engineering:</strong> False urgency, authority claims, reward promises</span>
+                            </li>
+                        </ul>
+                        <p>The final risk score combines all these factors, weighted by their predictive importance.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="example-analysis-card">
+                            <div class="example-header">
+                                <h4>Sample Analysis</h4>
+                                <span class="accuracy-badge">94% Accuracy</span>
+                            </div>
+                            <div class="example-content">
+                                <div class="example-email">
+                                    <p><strong>From:</strong> security@paypa1.com</p>
+                                    <p><strong>Subject:</strong> URGENT: Verify your account now</p>
+                                    <p>Dear Customer,</p>
+                                    <p>We have noticed suspicious login attempts on your account. Your account access will be suspended in 24 hours unless you verify your information. Click below to confirm your details:</p>
+                                    <p><a href="#">https://paypa1.com/secure-verify</a></p>
+                                    <p>PayPal Security Team</p>
+                                </div>
+                                <div class="example-result">
+                                    <div class="risk-meter high-risk">
+                                        <div class="risk-label">Risk Score: 92/100</div>
+                                    </div>
+                                    <h5>Detected Indicators:</h5>
+                                    <ul>
+                                        <li>Misspelled domain (paypa1 vs. paypal)</li>
+                                        <li>Urgency language ("24 hours", "URGENT")</li>
+                                        <li>Threat of negative consequence</li>
+                                        <li>Demands immediate action</li>
+                                        <li>Generic greeting ("Dear Customer")</li>
+                                    </ul>
+                                    <div class="verdict high-risk-text">
+                                        <strong>Verdict:</strong> Phishing attempt (92% confidence)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container text-center">
+                <h2>Want to Learn More About Phishing Detection?</h2>
+                <p class="lead">Join our workshops to master the skills of identifying phishing attempts</p>
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Register for Workshop</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4><i class="fas fa-shield-alt"></i> Phishing Defense</h4>
+                    <p>Empowering students with AI-powered cybersecurity skills to combat phishing threats.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/ai-tool/index.html">AI Tool</a></li>
+                        <li><a href="/workshops/index.html">Workshops</a></li>
+                        <li><a href="/materials/index.html">Materials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Workshops</h5>
+                    <ul class="footer-links">
+                        <li><a href="/workshops/workshop-1.html">Intro to Phishing</a></li>
+                        <li><a href="/workshops/workshop-2.html">Linguistic Patterns</a></li>
+                        <li><a href="/workshops/workshop-3.html">URL Analysis</a></li>
+                        <li><a href="/workshops/workshop-4.html">Hands-On Lab</a></li>
+                        <li><a href="/workshops/workshop-5.html">Certification</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@phishingdefense.org</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Phishing Defense Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register for Workshops</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registration-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="institution" class="form-label">Institution</label>
+                            <input type="text" class="form-control" id="institution" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Workshops of Interest</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-1" id="workshop1Check" checked>
+                                <label class="form-check-label" for="workshop1Check">
+                                    Workshop 1: Intro to Phishing
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-2" id="workshop2Check">
+                                <label class="form-check-label" for="workshop2Check">
+                                    Workshop 2: Linguistic Patterns
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-3" id="workshop3Check">
+                                <label class="form-check-label" for="workshop3Check">
+                                    Workshop 3: URL & Behavioral Analysis
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-4" id="workshop4Check">
+                                <label class="form-check-label" for="workshop4Check">
+                                    Workshop 4: Hands-On Lab
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-5" id="workshop5Check">
+                                <label class="form-check-label" for="workshop5Check">
+                                    Workshop 5: Results & Certification
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="all-workshops" id="allWorkshopsCheck">
+                                <label class="form-check-label" for="allWorkshopsCheck">
+                                    <strong>Full Workshop Series (all 5)</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional CSS for this page -->
+    <style>
+        .accuracy-badge-large {
+            display: inline-block;
+            background-color: var(--highlight);
+            color: var(--dark);
+            font-weight: 700;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            margin: 1rem 0;
+        }
+        
+        .ai-demo-interface {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-tabs {
+            background-color: #f8fafc;
+            padding: 0.5rem 0.5rem 0;
+        }
+        
+        .nav-tabs .nav-link {
+            border-radius: 5px 5px 0 0;
+            padding: 0.75rem 1.25rem;
+            font-weight: 500;
+        }
+        
+        .nav-tabs .nav-link i {
+            margin-right: 0.5rem;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: white;
+            border-color: #e5e7eb #e5e7eb white;
+            color: var(--primary);
+        }
+        
+        .demo-tab-content {
+            padding: 2rem;
+        }
+        
+        .example-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .example-item {
+            background-color: #f8fafc;
+            border-radius: 5px;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .example-item h5 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .example-preview {
+            font-size: 0.875rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            word-break: break-all;
+        }
+        
+        .how-it-works-item {
+            padding: 1.5rem;
+            height: 100%;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list li i {
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            font-size: 1.25rem;
+        }
+        
+        .example-analysis-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .example-header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .example-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .example-email {
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .example-email p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .example-result {
+            padding: 1.5rem;
+        }
+        
+        .risk-meter {
+            height: 10px;
+            background-color: #e5e7eb;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .high-risk {
+            background-color: var(--danger);
+        }
+        
+        .medium-risk {
+            background-color: var(--warning);
+        }
+        
+        .low-risk {
+            background-color: var(--success);
+        }
+        
+        .risk-label {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            font-weight: 600;
+        }
+        
+        .verdict {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: #fffbeb;
+            border-radius: 5px;
+        }
+        
+        @media (min-width: 768px) {
+            .example-content {
+                flex-direction: row;
+            }
+            
+            .example-email {
+                width: 50%;
+                border-bottom: none;
+                border-right: 1px solid #e5e7eb;
+            }
+            
+            .example-result {
+                width: 50%;
+            }
+        }
+        
+        /* Additional email examples content */
+        .email-examples {
+            display: none;
+        }
+        
+        #email-example-1 {
+            from: security@bankofamerica-secure.com
+            subject: URGENT: Your Bank of America account has been locked
+            
+            Dear Valued Customer,
+            
+            We have detected unusual activity on your Bank of America account. For your security, we have temporarily locked your account.
+            
+            To restore access to your account, please verify your information by clicking the link below:
+            
+            [Verify Account Now]
+            
+            Failure to verify your information within 24 hours will result in permanent account suspension.
+            
+            Thank you for your cooperation.
+            
+            Bank of America Security Team
+        }
+        
+        #email-example-2 {
+            from: no-reply@microsoft-verify.net
+            subject: Your Microsoft password expired - Action Required
+            
+            Microsoft Account Security Alert:
+            
+            Your password has expired. Due to recent security policy updates, you are required to reset your password immediately.
+            
+            Click here to reset your password: [Reset Password]
+            
+            This is an automated message. Please do not reply to this email.
+            
+            Microsoft Security Team
+        }
+        
+        #email-example-3 {
+            from: delivery-notification@fedx.com
+            subject: Your package is waiting for delivery confirmation
+            
+            Package Delivery Notification
+            
+            Tracking Number: FDX7391452608
+            
+            Your package could not be delivered due to incomplete address information. To arrange delivery, please confirm your address within 3 days by clicking below:
+            
+            [Confirm Delivery Address]
+            
+            A processing fee of $1.99 will be charged for address verification.
+            
+            FedX Delivery Services
+        }
+        
+        #url-example-1 {
+            https://secure-banking.chase-verification.com/login
+        }
+        
+        #url-example-2 {
+            https://bit.ly/3xR8pQ2
+        }
+        
+        #url-example-3 {
+            https://paypa1.com/account/login
+        }
+    </style>
+
+    <!-- JavaScript for the demo functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Setup example loading
+            const loadExampleButtons = document.querySelectorAll('.load-example');
+            
+            loadExampleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    const example = this.getAttribute('data-example');
+                    
+                    if (target === 'email') {
+                        // Get example content
+                        let content = '';
+                        switch(example) {
+                            case 'email-1':
+                                content = `From: security@bankofamerica-secure.com
+Subject: URGENT: Your Bank of America account has been locked
+
+Dear Valued Customer,
+
+We have detected unusual activity on your Bank of America account. For your security, we have temporarily locked your account.
+
+To restore access to your account, please verify your information by clicking the link below:
+
+https://secure.bankofamerica-verify.com/login
+
+Failure to verify your information within 24 hours will result in permanent account suspension.
+
+Thank you for your cooperation.
+
+Bank of America Security Team`;
+                                break;
+                            case 'email-2':
+                                content = `From: no-reply@microsoft-verify.net
+Subject: Your Microsoft password expired - Action Required
+
+Microsoft Account Security Alert:
+
+Your password has expired. Due to recent security policy updates, you are required to reset your password immediately.
+
+Click here to reset your password: https://microsoft-verify.net/reset-password
+
+This is an automated message. Please do not reply to this email.
+
+Microsoft Security Team`;
+                                break;
+                            case 'email-3':
+                                content = `From: delivery-notification@fedx.com
+Subject: Your package is waiting for delivery confirmation
+
+Package Delivery Notification
+
+Tracking Number: FDX7391452608
+
+Your package could not be delivered due to incomplete address information. To arrange delivery, please confirm your address within 3 days by clicking below:
+
+https://fedx-tracking.com/confirm-delivery?id=FDX7391452608
+
+A processing fee of $1.99 will be charged for address verification.
+
+FedX Delivery Services`;
+                                break;
+                        }
+                        
+                        // Set content in email input
+                        document.getElementById('email-input').value = content;
+                        
+                        // Switch to email tab
+                        document.getElementById('email-tab').click();
+                    } else if (target === 'url') {
+                        // Get example content
+                        let content = '';
+                        switch(example) {
+                            case 'url-1':
+                                content = 'https://secure-banking.chase-verification.com/login';
+                                break;
+                            case 'url-2':
+                                content = 'https://bit.ly/3xR8pQ2';
+                                break;
+                            case 'url-3':
+                                content = 'https://paypa1.com/account/login';
+                                break;
+                        }
+                        
+                        // Set content in URL input
+                        document.getElementById('url-input').value = content;
+                        
+                        // Switch to URL tab
+                        document.getElementById('url-tab').click();
+                    }
+                });
+            });
+            
+            // Setup analysis buttons
+            document.getElementById('analyze-email-btn').addEventListener('click', function() {
+                const emailText = document.getElementById('email-input').value;
+                if (!emailText.trim()) {
+                    alert('Please enter an email to analyze.');
+                    return;
+                }
+                
+                // Show loading state
+                const resultsContainer = document.querySelector('.analysis-results');
+                resultsContainer.innerHTML = `
+                    <div class="text-center p-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-3">Analyzing email...</p>
+                    </div>
+                `;
+                
+                // Scroll to results
+                resultsContainer.scrollIntoView({ behavior: 'smooth' });
+                
+                // Simulate API call with timeout
+                setTimeout(() => {
+                    // Generate analysis results
+                    // In a real app, this would come from the backend
+                    const riskScore = Math.floor(Math.random() * 30) + 70; // Between 70-99
+                    let riskLevel = riskScore > 85 ? 'high' : 'medium';
+                    
+                    // Display results
+                    displayAnalysisResults(resultsContainer, {
+                        type: 'email',
+                        input: emailText,
+                        riskScore: riskScore,
+                        riskLevel: riskLevel,
+                        indicators: [
+                            'Suspicious sender domain',
+                            'Urgency language detected',
+                            'Link URL doesn\'t match display text',
+                            'Request for personal information',
+                            'Threatening consequences mentioned',
+                            'AI confidence: 94% (based on model accuracy)'
+                        ],
+                        recommendation: riskLevel === 'high' ? 
+                            'Delete immediately and report as phishing' : 
+                            'Exercise caution and verify through official channels'
+                    });
+                }, 2000);
+            });
+            
+            document.getElementById('analyze-url-btn').addEventListener('click', function() {
+                const urlText = document.getElementById('url-input').value;
+                if (!urlText.trim()) {
+                    alert('Please enter a URL to analyze.');
+                    return;
+                }
+                
+                // Show loading state
+                const resultsContainer = document.querySelector('.analysis-results');
+                resultsContainer.innerHTML = `
+                    <div class="text-center p-5">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-3">Analyzing URL...</p>
+                    </div>
+                `;
+                
+                // Scroll to results
+                resultsContainer.scrollIntoView({ behavior: 'smooth' });
+                
+                // Simulate API call with timeout
+                setTimeout(() => {
+                    // Generate analysis results
+                    // In a real app, this would come from the backend
+                    const riskScore = Math.floor(Math.random() * 30) + 70; // Between 70-99
+                    let riskLevel = riskScore > 85 ? 'high' : 'medium';
+                    
+                    // Display results
+                    displayAnalysisResults(resultsContainer, {
+                        type: 'url',
+                        input: urlText,
+                        riskScore: riskScore,
+                        riskLevel: riskLevel,
+                        indicators: [
+                            'Domain registered recently',
+                            'Misspelled brand name in domain',
+                            'URL redirects through multiple domains',
+                            'Suspicious TLD (.xyz, .info, etc.)',
+                            'AI confidence: 94% (based on model accuracy)'
+                        ],
+                        recommendation: riskLevel === 'high' ? 
+                            'Do not visit this URL - likely phishing' : 
+                            'Exercise caution when visiting this site'
+                    });
+                }, 2000);
+            });
+            
+            // Function to display analysis results
+            function displayAnalysisResults(container, data) {
+                let indicatorsHTML = '';
+                data.indicators.forEach(indicator => {
+                    indicatorsHTML += `<li>${indicator}</li>`;
+                });
+                
+                container.innerHTML = `
+                    <div class="analysis-card">
+                        <div class="analysis-header ${data.riskLevel}-risk">
+                            <h3>Analysis Results</h3>
+                            <span class="accuracy-badge">94% Accuracy</span>
+                        </div>
+                        <div class="analysis-content">
+                            <div class="input-summary">
+                                <h4>${data.type === 'email' ? 'Email' : 'URL'} Analyzed:</h4>
+                                <div class="input-preview">${data.input}</div>
+                            </div>
+                            
+                            <div class="risk-assessment">
+                                <h4>Risk Assessment:</h4>
+                                <div class="risk-meter-container">
+                                    <div class="risk-meter">
+                                        <div class="risk-fill ${data.riskLevel}-risk" style="width: ${data.riskScore}%"></div>
+                                    </div>
+                                    <div class="risk-labels">
+                                        <span>Low</span>
+                                        <span>Medium</span>
+                                        <span>High</span>
+                                    </div>
+                                </div>
+                                <div class="risk-score">
+                                    Risk Score: <strong>${data.riskScore}/100</strong> (${data.riskLevel.charAt(0).toUpperCase() + data.riskLevel.slice(1)} Risk)
+                                </div>
+                            </div>
+                            
+                            <div class="detected-indicators">
+                                <h4>Detected Indicators:</h4>
+                                <ul>${indicatorsHTML}</ul>
+                            </div>
+                            
+                            <div class="recommendation">
+                                <h4>Recommended Action:</h4>
+                                <p class="${data.riskLevel}-risk-text">${data.recommendation}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+    </script>
+
+    <!-- Bootstrap and custom JavaScript -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

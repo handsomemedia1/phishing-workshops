@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detection Workshops - Cybersecurity Sensitization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <i class="fas fa-shield-alt"></i> Phishing Defense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aiToolDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            AI Tool
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aiToolDropdown">
+                            <li><a class="dropdown-item" href="/ai-tool/index.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/ai-tool/demo.html">Demo</a></li>
+                            <li><a class="dropdown-item" href="/ai-tool/technical.html">Technical Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="workshopsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Workshops
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workshopsDropdown">
+                            <li><a class="dropdown-item active" href="/workshops/index.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-1.html">Workshop 1: Intro to Phishing</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-2.html">Workshop 2: Linguistic Patterns</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-3.html">Workshop 3: URL Analysis</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-4.html">Workshop 4: Hands-On Lab</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-5.html">Workshop 5: Results & Certification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materials/index.html">Materials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white register-btn" href="#register-modal" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Workshop Series Overview</h1>
+            <p class="lead">A comprehensive program to build phishing detection skills with AI assistance</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="section-heading">Workshop Progression</h2>
+                        <p>Our cybersecurity sensitization program consists of 5 progressive workshops designed to build students' phishing detection skills through hands-on interaction with our AI tool.</p>
+                        
+                        <div class="workshop-journey-graphic mb-5">
+                            <div class="journey-line"></div>
+                            <div class="journey-steps">
+                                <div class="journey-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h3>Introduction</h3>
+                                        <p>Phishing fundamentals and AI tool demonstration</p>
+                                    </div>
+                                </div>
+                                <div class="journey-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h3>Pattern Recognition</h3>
+                                        <p>Analysis of linguistic patterns in phishing messages</p>
+                                    </div>
+                                </div>
+                                <div class="journey-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h3>Technical Analysis</h3>
+                                        <p>URL examination and behavioral cues in attacks</p>
+                                    </div>
+                                </div>
+                                <div class="journey-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h3>Practical Application</h3>
+                                        <p>Hands-on lab with real-world examples</p>
+                                    </div>
+                                </div>
+                                <div class="journey-step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h3>Assessment</h3>
+                                        <p>Performance review and certification</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Learning Objectives</h3>
+                            <p>By completing the full workshop series, students will:</p>
+                            <ul>
+                                <li>Identify common linguistic patterns used in phishing attempts</li>
+                                <li>Analyze URLs for suspicious characteristics</li>
+                                <li>Recognize social engineering and behavioral manipulation tactics</li>
+                                <li>Develop practical assessment skills using AI-assisted tools</li>
+                                <li>Demonstrate improved phishing detection accuracy (compared to our AI's 94% benchmark)</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>AI Tool Integration</h3>
+                            <p>Our phishing detection AI with <span class="highlight">94% accuracy</span> is central to all workshop activities:</p>
+                            
+                            <div class="ai-integration-table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Workshop</th>
+                                            <th>AI Tool Integration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Workshop 1</strong></td>
+                                            <td>Introduction and demonstration of the tool's capabilities</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Workshop 2</strong></td>
+                                            <td>Using the tool to analyze linguistic patterns</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Workshop 3</strong></td>
+                                            <td>Applying the tool to URL and behavioral analysis</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Workshop 4</strong></td>
+                                            <td>Hands-on lab with full tool access</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Workshop 5</strong></td>
+                                            <td>Reviewing performance metrics and certification</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Workshop Format</h3>
+                            <p>Each 90-minute workshop follows a consistent structure:</p>
+                            
+                            <div class="workshop-format">
+                                <div class="format-item">
+                                    <div class="format-time">10 min</div>
+                                    <div class="format-content">
+                                        <h4>Introduction</h4>
+                                        <p>Review of previous material and introduction of new concepts</p>
+                                    </div>
+                                </div>
+                                <div class="format-item">
+                                    <div class="format-time">15 min</div>
+                                    <div class="format-content">
+                                        <h4>Demonstration</h4>
+                                        <p>Instructor-led examples using the AI tool</p>
+                                    </div>
+                                </div>
+                                <div class="format-item">
+                                    <div class="format-time">30 min</div>
+                                    <div class="format-content">
+                                        <h4>Interactive Exercise</h4>
+                                        <p>Hands-on student activities with the AI tool</p>
+                                    </div>
+                                </div>
+                                <div class="format-item">
+                                    <div class="format-time">20 min</div>
+                                    <div class="format-content">
+                                        <h4>Group Discussion</h4>
+                                        <p>Analysis of findings and practical applications</p>
+                                    </div>
+                                </div>
+                                <div class="format-item">
+                                    <div class="format-time">15 min</div>
+                                    <div class="format-content">
+                                        <h4>Assessment</h4>
+                                        <p>Brief quiz or exercise to measure understanding</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <div class="content-card text-center">
+                                <h3>Register for Workshops</h3>
+                                <p>Participate in our AI-powered phishing detection workshop series.</p>
+                                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>Workshop Schedule</h3>
+                                <div class="upcoming-workshops">
+                                    <div class="workshop-date">
+                                        <div class="date-block">
+                                            <span class="month">JUN</span>
+                                            <span class="day">12</span>
+                                        </div>
+                                        <div class="workshop-info">
+                                            <h4>Workshop 1: Intro to Phishing</h4>
+                                            <p>9:00 AM - 10:30 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="workshop-date">
+                                        <div class="date-block">
+                                            <span class="month">JUN</span>
+                                            <span class="day">19</span>
+                                        </div>
+                                        <div class="workshop-info">
+                                            <h4>Workshop 2: Linguistic Patterns</h4>
+                                            <p>9:00 AM - 10:30 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="workshop-date">
+                                        <div class="date-block">
+                                            <span class="month">JUN</span>
+                                            <span class="day">26</span>
+                                        </div>
+                                        <div class="workshop-info">
+                                            <h4>Workshop 3: URL Analysis</h4>
+                                            <p>9:00 AM - 10:30 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="workshop-date">
+                                        <div class="date-block">
+                                            <span class="month">JUL</span>
+                                            <span class="day">3</span>
+                                        </div>
+                                        <div class="workshop-info">
+                                            <h4>Workshop 4: Hands-On Lab</h4>
+                                            <p>9:00 AM - 10:30 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="workshop-date">
+                                        <div class="date-block">
+                                            <span class="month">JUL</span>
+                                            <span class="day">10</span>
+                                        </div>
+                                        <div class="workshop-info">
+                                            <h4>Workshop 5: Certification</h4>
+                                            <p>9:00 AM - 10:30 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>Quick Links</h3>
+                                <div class="workshop-quick-links">
+                                    <a href="/workshops/workshop-1.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-graduation-cap"></i></div>
+                                        <div class="link-text">Workshop 1: Intro to Phishing</div>
+                                    </a>
+                                    <a href="/workshops/workshop-2.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-comment-alt"></i></div>
+                                        <div class="link-text">Workshop 2: Linguistic Patterns</div>
+                                    </a>
+                                    <a href="/workshops/workshop-3.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-link"></i></div>
+                                        <div class="link-text">Workshop 3: URL Analysis</div>
+                                    </a>
+                                    <a href="/workshops/workshop-4.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-laptop-code"></i></div>
+                                        <div class="link-text">Workshop 4: Hands-On Lab</div>
+                                    </a>
+                                    <a href="/workshops/workshop-5.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-certificate"></i></div>
+                                        <div class="link-text">Workshop 5: Certification</div>
+                                    </a>
+                                    <a href="/ai-tool/index.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-robot"></i></div>
+                                        <div class="link-text">AI Tool Overview</div>
+                                    </a>
+                                    <a href="/materials/index.html" class="quick-link">
+                                        <div class="link-icon"><i class="fas fa-file-download"></i></div>
+                                        <div class="link-text">Workshop Materials</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Detailed Workshop Information</h2>
+                
+                <div class="workshop-details">
+                    <div class="workshop-detail-card">
+                        <div class="workshop-header">
+                            <div class="workshop-number">1</div>
+                            <h3>Introduction to Phishing & AI Tools</h3>
+                        </div>
+                        <div class="workshop-detail-content">
+                            <p><strong>Description:</strong> This initial workshop introduces students to the fundamentals of phishing threats and demonstrates our AI tool's capabilities in detecting malicious communications.</p>
+                            <div class="workshop-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Phishing types and tactics</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Introduction to our AI tool with 94% accuracy</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">"Spot the Phish" interactive exercise</div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-3">
+                                <a href="/workshops/workshop-1.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workshop-detail-card">
+                        <div class="workshop-header">
+                            <div class="workshop-number">2</div>
+                            <h3>Linguistic Pattern Analysis</h3>
+                        </div>
+                        <div class="workshop-detail-content">
+                            <p><strong>Description:</strong> Students learn to identify suspicious language patterns typically used in phishing attempts and use our AI tool to analyze text for risk indicators.</p>
+                            <div class="workshop-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Common linguistic red flags</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">AI text analysis demonstration</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Language pattern recognition exercises</div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-3">
+                                <a href="/workshops/workshop-2.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workshop-detail-card">
+                        <div class="workshop-header">
+                            <div class="workshop-number">3</div>
+                            <h3>URL & Behavioral Analysis</h3>
+                        </div>
+                        <div class="workshop-detail-content">
+                            <p><strong>Description:</strong> This workshop focuses on analyzing suspicious URLs and understanding the behavioral manipulation tactics used in phishing attacks.</p>
+                            <div class="workshop-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">URL structure and security indicators</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Social engineering techniques</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">AI-powered URL scanning</div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-3">
+                                <a href="/workshops/workshop-3.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workshop-detail-card">
+                        <div class="workshop-header">
+                            <div class="workshop-number">4</div>
+                            <h3>Hands-On Lab</h3>
+                        </div>
+                        <div class="workshop-detail-content">
+                            <p><strong>Description:</strong> Students apply their knowledge in a practical session, analyzing multiple examples of phishing and legitimate communications using the AI tool.</p>
+                            <div class="workshop-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Complete access to AI detection interface</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Real-world phishing scenarios</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Human vs. AI detection competition</div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-3">
+                                <a href="/workshops/workshop-4.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="workshop-detail-card">
+                        <div class="workshop-header">
+                            <div class="workshop-number">5</div>
+                            <h3>Results & Certification</h3>
+                        </div>
+                        <div class="workshop-detail-content">
+                            <p><strong>Description:</strong> The final workshop reviews results, measures improvement, and awards phishing detection certification to participants who complete the series.</p>
+                            <div class="workshop-highlights">
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Performance analysis and metrics</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Comparison with AI's 94% benchmark</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-icon"><i class="fas fa-check"></i></div>
+                                    <div class="highlight-text">Certificate of completion ceremony</div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-3">
+                                <a href="/workshops/workshop-5.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container text-center">
+                <h2>Ready to Build Your Phishing Defense Skills?</h2>
+                <p class="lead">Register for our workshop series today</p>
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4><i class="fas fa-shield-alt"></i> Phishing Defense</h4>
+                    <p>Empowering students with AI-powered cybersecurity skills to combat phishing threats.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/ai-tool/index.html">AI Tool</a></li>
+                        <li><a href="/workshops/index.html">Workshops</a></li>
+                        <li><a href="/materials/index.html">Materials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Workshops</h5>
+                    <ul class="footer-links">
+                        <li><a href="/workshops/workshop-1.html">Intro to Phishing</a></li>
+                        <li><a href="/workshops/workshop-2.html">Linguistic Patterns</a></li>
+                        <li><a href="/workshops/workshop-3.html">URL Analysis</a></li>
+                        <li><a href="/workshops/workshop-4.html">Hands-On Lab</a></li>
+                        <li><a href="/workshops/workshop-5.html">Certification</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@phishingdefense.org</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Phishing Defense Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register for Workshops</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registration-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="institution" class="form-label">Institution</label>
+                            <input type="text" class="form-control" id="institution" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Workshops of Interest</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-1" id="workshop1Check" checked>
+                                <label class="form-check-label" for="workshop1Check">
+                                    Workshop 1: Intro to Phishing
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-2" id="workshop2Check">
+                                <label class="form-check-label" for="workshop2Check">
+                                    Workshop 2: Linguistic Patterns
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-3" id="workshop3Check">
+                                <label class="form-check-label" for="workshop3Check">
+                                    Workshop 3: URL & Behavioral Analysis
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-4" id="workshop4Check">
+                                <label class="form-check-label" for="workshop4Check">
+                                    Workshop 4: Hands-On Lab
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-5" id="workshop5Check">
+                                <label class="form-check-label" for="workshop5Check">
+                                    Workshop 5: Results & Certification
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="all-workshops" id="allWorkshopsCheck">
+                                <label class="form-check-label" for="allWorkshopsCheck">
+                                    <strong>Full Workshop Series (all 5)</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional CSS for this page -->
+    <style>
+        .workshop-journey-graphic {
+            position: relative;
+            padding: 2rem 0;
+            margin: 3rem 0;
+        }
+        
+        .journey-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--primary);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .journey-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .journey-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border: 4px solid white;
+        }
+        
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-content p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .workshop-format {
+            margin-top: 1.5rem;
+        }
+        
+        .format-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .format-time {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-right: 1rem;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .format-content h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .format-content p {
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+        
+        .upcoming-workshops {
+            margin-top: 1rem;
+        }
+        
+        .workshop-date {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .workshop-date:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .date-block {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            text-align: center;
+        }
+        
+        .month {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .day {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .workshop-info {
+            flex-grow: 1;
+        }
+        
+        .workshop-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .workshop-info p {
+            margin-bottom: 0;
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        .workshop-quick-links {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .quick-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-light);
+            transition: background-color 0.3s ease;
+        }
+        
+        .quick-link:last-child {
+            border-bottom: none;
+        }
+        
+        .quick-link:hover {
+            background-color: #f8fafc;
+        }
+        
+        .link-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        
+        .workshop-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .workshop-detail-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .workshop-header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .workshop-number {
+            width: 36px;
+            height: 36px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .workshop-header h3 {
+            margin-bottom: 0;
+        }
+        
+        .workshop-detail-content {
+            padding: 1.5rem;
+        }
+        
+        .workshop-highlights {
+            margin-top: 1rem;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-icon {
+            width: 24px;
+            height: 24px;
+            background-color: var(--success);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            margin-right: 0.75rem;
+        }
+        
+        @media (max-width: 992px) {
+            .journey-steps {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .journey-step {
+                width: 100%;
+                flex-direction: row;
+                text-align: left;
+                margin-bottom: 1.5rem;
+            }
+            
+            .step-content {
+                margin-left: 1rem;
+            }
+            
+            .journey-line {
+                width: 4px;
+                height: 100%;
+                left: 25px;
+                top: 0;
+                transform: none;
+            }
+        }
+    </style>
+
+    <!-- Bootstrap and custom JavaScript -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

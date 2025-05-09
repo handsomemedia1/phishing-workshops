@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Technical Details - Cybersecurity Sensitization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <i class="fas fa-shield-alt"></i> Phishing Defense
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="aiToolDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            AI Tool
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aiToolDropdown">
+                            <li><a class="dropdown-item" href="/ai-tool/index.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/ai-tool/demo.html">Demo</a></li>
+                            <li><a class="dropdown-item active" href="/ai-tool/technical.html">Technical Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="workshopsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Workshops
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="workshopsDropdown">
+                            <li><a class="dropdown-item" href="/workshops/index.html">Overview</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-1.html">Workshop 1: Intro to Phishing</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-2.html">Workshop 2: Linguistic Patterns</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-3.html">Workshop 3: URL Analysis</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-4.html">Workshop 4: Hands-On Lab</a></li>
+                            <li><a class="dropdown-item" href="/workshops/workshop-5.html">Workshop 5: Results & Certification</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/materials/index.html">Materials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white register-btn" href="#register-modal" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>AI Tool Technical Specifications</h1>
+            <p class="lead">The technology behind our <span class="highlight">94% accurate</span> phishing detection system</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="section-heading">Model Architecture</h2>
+                        <p>Our phishing detection system employs a sophisticated hybrid architecture that combines multiple analysis components to achieve its high level of accuracy.</p>
+                        
+                        <div class="content-card">
+                            <h3>Core Components</h3>
+                            <div class="tech-diagram mb-4">
+                                <img src="/images/ai-architecture-diagram.png" alt="AI System Architecture" class="img-fluid rounded">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="tech-component">
+                                        <h4>NLP Component</h4>
+                                        <p>Fine-tuned transformer model that analyzes linguistic patterns in message content.</p>
+                                        <ul class="component-features">
+                                            <li>Pre-trained on 175,000+ phishing emails</li>
+                                            <li>Sentiment and intent analysis</li>
+                                            <li>Contextual understanding</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="tech-component">
+                                        <h4>URL Analysis Engine</h4>
+                                        <p>Specialized algorithm for assessing link safety and authenticity.</p>
+                                        <ul class="component-features">
+                                            <li>Domain reputation checking</li>
+                                            <li>URL structure analysis</li>
+                                            <li>SSL certificate verification</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="tech-component">
+                                        <h4>Behavioral Analysis</h4>
+                                        <p>Machine learning classifier for social engineering tactics identification.</p>
+                                        <ul class="component-features">
+                                            <li>Psychological manipulation detection</li>
+                                            <li>Urgency and pressure indicators</li>
+                                            <li>Authority misrepresentation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Performance Metrics</h3>
+                            <p>Our model has been extensively tested in blind evaluation scenarios, achieving industry-leading detection rates.</p>
+                            
+                            <div class="metrics-table-wrapper">
+                                <table class="table table-bordered">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>Metric</th>
+                                            <th>Value</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Overall Accuracy</strong></td>
+                                            <td class="metric-value">94.0%</td>
+                                            <td>Percentage of correctly classified emails (phishing + legitimate)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Precision</strong></td>
+                                            <td class="metric-value">93.2%</td>
+                                            <td>Percentage of true positives among all positive predictions</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Recall</strong></td>
+                                            <td class="metric-value">94.7%</td>
+                                            <td>Percentage of phishing emails correctly identified</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>F1 Score</strong></td>
+                                            <td class="metric-value">93.9%</td>
+                                            <td>Harmonic mean of precision and recall</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>False Positive Rate</strong></td>
+                                            <td class="metric-value">2.8%</td>
+                                            <td>Legitimate emails incorrectly flagged as phishing</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>False Negative Rate</strong></td>
+                                            <td class="metric-value">3.1%</td>
+                                            <td>Phishing emails incorrectly classified as legitimate</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Average Processing Time</strong></td>
+                                            <td class="metric-value">1.7 seconds</td>
+                                            <td>Time to analyze and classify a typical email</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="metrics-comparison mt-4">
+                                <h4>Comparison to Industry Benchmarks</h4>
+                                <div class="metrics-graph mb-3">
+                                    <img src="/images/accuracy-comparison-graph.png" alt="Accuracy Comparison Graph" class="img-fluid rounded">
+                                </div>
+                                <p>Our model's 94% accuracy exceeds most commercial phishing detection solutions and significantly outperforms typical human detection rates (70-80% in studies).</p>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Training Dataset</h3>
+                            <p>The AI model was trained on a diverse corpus carefully selected to represent real-world phishing scenarios:</p>
+                            
+                            <div class="dataset-breakdown">
+                                <ul class="dataset-stats">
+                                    <li><strong>175,000</strong> confirmed phishing emails/messages</li>
+                                    <li><strong>75,000</strong> legitimate communications</li>
+                                    <li><strong>50,000</strong> edge cases with mixed signals</li>
+                                </ul>
+                                
+                                <div class="dataset-sources">
+                                    <h4>Sources include:</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Academic institutions</li>
+                                                <li>Financial services</li>
+                                                <li>Social media platforms</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>E-commerce websites</li>
+                                                <li>Government communications</li>
+                                                <li>Corporate email systems</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="dataset-chart mt-4">
+                                    <h4>Dataset Composition</h4>
+                                    <div class="dataset-graph">
+                                        <img src="/images/dataset-composition.png" alt="Dataset Composition Pie Chart" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card">
+                            <h3>Feature Extraction</h3>
+                            <p>Our system analyzes over 200 distinct features to make its determinations. Key feature categories include:</p>
+                            
+                            <div class="feature-categories">
+                                <div class="feature-category">
+                                    <h4>Linguistic Features</h4>
+                                    <ul class="feature-list">
+                                        <li>Urgency indicators (e.g., "immediate action", "urgent", "now")</li>
+                                        <li>Grammatical anomalies and spelling errors</li>
+                                        <li>Tone mismatches (formal vs. informal)</li>
+                                        <li>Authority claims and impersonation markers</li>
+                                        <li>Reward or threat language</li>
+                                        <li>Generic greetings vs. personalized content</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="feature-category">
+                                    <h4>Technical Features</h4>
+                                    <ul class="feature-list">
+                                        <li>Domain age and reputation scores</li>
+                                        <li>URL structure anomalies (e.g., lookalike domains)</li>
+                                        <li>SSL certificate validity and age</li>
+                                        <li>Email header analysis (SPF, DKIM, DMARC)</li>
+                                        <li>Sender authentication inconsistencies</li>
+                                        <li>Link destination vs. display text mismatch</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="feature-category">
+                                    <h4>Behavioral Markers</h4>
+                                    <ul class="feature-list">
+                                        <li>Social pressure tactics</li>
+                                        <li>Scarcity manipulation ("limited time offer")</li>
+                                        <li>Authority exploitation (e.g., CEO impersonation)</li>
+                                        <li>Reciprocity triggers</li>
+                                        <li>Commitment techniques</li>
+                                        <li>Fear-based manipulation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-importance mt-4">
+                                <h4>Feature Importance in Classification</h4>
+                                <div class="importance-graph">
+                                    <img src="/images/feature-importance-graph.png" alt="Feature Importance Graph" class="img-fluid rounded">
+                                </div>
+                                <p class="feature-note mt-3">The graph above shows the relative importance of different feature categories in making the final determination. URL characteristics and urgency language are particularly strong indicators of phishing attempts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <div class="content-card">
+                                <h3>Performance Highlights</h3>
+                                <div class="performance-highlight">
+                                    <div class="highlight-icon">
+                                        <i class="fas fa-bullseye"></i>
+                                    </div>
+                                    <div class="highlight-content">
+                                        <h4>94% Accuracy</h4>
+                                        <p>Overall detection accuracy in blind testing</p>
+                                    </div>
+                                </div>
+                                <div class="performance-highlight">
+                                    <div class="highlight-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="highlight-content">
+                                        <h4>2.8% False Positives</h4>
+                                        <p>Minimal legitimate email misclassification</p>
+                                    </div>
+                                </div>
+                                <div class="performance-highlight">
+                                    <div class="highlight-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <div class="highlight-content">
+                                        <h4>1.7-Second Analysis</h4>
+                                        <p>Average processing time per message</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>Technical Documentation</h3>
+                                <ul class="documentation-links">
+                                    <li>
+                                        <a href="/materials/ai-resources/ai-accuracy-report.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Accuracy Validation Report</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/materials/ai-resources/model-architecture.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Model Architecture Details</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/materials/ai-resources/feature-extraction.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Feature Extraction Process</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/materials/ai-resources/training-methodology.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Training Methodology</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/materials/ai-resources/performance-benchmarks.pdf" target="_blank">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>Performance Benchmarks</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>API Integration</h3>
+                                <p>Our system offers a RESTful API for integration with:</p>
+                                <ul class="integration-list">
+                                    <li><i class="fas fa-envelope"></i> Email clients</li>
+                                    <li><i class="fas fa-globe"></i> Web browsers</li>
+                                    <li><i class="fas fa-graduation-cap"></i> Learning management systems</li>
+                                    <li><i class="fas fa-shield-alt"></i> Security infrastructure</li>
+                                </ul>
+                                <div class="api-example">
+                                    <h4>Sample API Request</h4>
+                                    <pre class="code-block"><code>POST /api/v1/analyze HTTP/1.1
+Host: api.phishingdefense.org
+Content-Type: application/json
+Authorization: Bearer API_KEY
+
+{
+  "message": {
+    "sender": "security@example.com",
+    "subject": "Account Verification",
+    "body": "Dear user, please verify..."
+  }
+}</code></pre>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="/materials/ai-resources/api-documentation.pdf" class="btn btn-outline-primary" target="_blank">
+                                        <i class="fas fa-file-code"></i> API Documentation
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="content-card">
+                                <h3>Continuous Improvement</h3>
+                                <p>The model undergoes monthly retraining with:</p>
+                                <ul>
+                                    <li>New phishing samples from threat intelligence feeds</li>
+                                    <li>User-submitted false positives/negatives</li>
+                                    <li>Emerging phishing tactics</li>
+                                </ul>
+                                <div class="improvement-chart">
+                                    <img src="/images/accuracy-improvement-chart.png" alt="Accuracy Improvement Over Time" class="img-fluid rounded">
+                                </div>
+                                <p class="mt-2">This ensures the 94% accuracy is maintained despite evolving threats.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Workshop Implementation</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="content-card">
+                            <p>For educational purposes, we've developed a simplified web interface that:</p>
+                            
+                            <div class="workshop-implementation">
+                                <div class="implementation-item">
+                                    <div class="implementation-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="implementation-content">
+                                        <h4>Maintains 94% Accuracy</h4>
+                                        <p>Despite simplification, the educational version preserves the core detection capabilities of the full system.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="implementation-item">
+                                    <div class="implementation-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="implementation-content">
+                                        <h4>Transparent Explanations</h4>
+                                        <p>Provides detailed explanations of detection logic to enhance student understanding.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="implementation-item">
+                                    <div class="implementation-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="implementation-content">
+                                        <h4>Visual Threat Indicators</h4>
+                                        <p>Highlights suspicious elements directly in the message for clear identification.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="implementation-item">
+                                    <div class="implementation-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div class="implementation-content">
+                                        <h4>Comparison Metrics</h4>
+                                        <p>Allows for comparison of human vs. AI assessment to measure student progress.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="try-demo-banner mt-4">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h4>Experience the Tool Yourself</h4>
+                                        <p>Try our interactive demo to see the 94% accuracy in action.</p>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <a href="/ai-tool/demo.html" class="btn btn-primary">Launch Demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container text-center">
+                <h2>Ready to Experience Advanced Phishing Protection?</h2>
+                <p class="lead">Register for our workshops to learn how to use AI-powered tools</p>
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">Register for Workshop</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4><i class="fas fa-shield-alt"></i> Phishing Defense</h4>
+                    <p>Empowering students with AI-powered cybersecurity skills to combat phishing threats.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/ai-tool/index.html">AI Tool</a></li>
+                        <li><a href="/workshops/index.html">Workshops</a></li>
+                        <li><a href="/materials/index.html">Materials</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Workshops</h5>
+                    <ul class="footer-links">
+                        <li><a href="/workshops/workshop-1.html">Intro to Phishing</a></li>
+                        <li><a href="/workshops/workshop-2.html">Linguistic Patterns</a></li>
+                        <li><a href="/workshops/workshop-3.html">URL Analysis</a></li>
+                        <li><a href="/workshops/workshop-4.html">Hands-On Lab</a></li>
+                        <li><a href="/workshops/workshop-5.html">Certification</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@phishingdefense.org</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Phishing Defense Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register for Workshops</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registration-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="institution" class="form-label">Institution</label>
+                            <input type="text" class="form-control" id="institution" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Workshops of Interest</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-1" id="workshop1Check" checked>
+                                <label class="form-check-label" for="workshop1Check">
+                                    Workshop 1: Intro to Phishing
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-2" id="workshop2Check">
+                                <label class="form-check-label" for="workshop2Check">
+                                    Workshop 2: Linguistic Patterns
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-3" id="workshop3Check">
+                                <label class="form-check-label" for="workshop3Check">
+                                    Workshop 3: URL & Behavioral Analysis
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-4" id="workshop4Check">
+                                <label class="form-check-label" for="workshop4Check">
+                                    Workshop 4: Hands-On Lab
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="workshop-5" id="workshop5Check">
+                                <label class="form-check-label" for="workshop5Check">
+                                    Workshop 5: Results & Certification
+                                </label>
+                            </div>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" value="all-workshops" id="allWorkshopsCheck">
+                                <label class="form-check-label" for="allWorkshopsCheck">
+                                    <strong>Full Workshop Series (all 5)</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional CSS for this page -->
+    <style>
+        .tech-component {
+            background-color: #f8fafc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .tech-component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tech-component h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .component-features {
+            padding-left: 1.25rem;
+            margin-top: 1rem;
+        }
+        
+        .component-features li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .metrics-table-wrapper {
+            margin: 2rem 0;
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .dataset-stats {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .dataset-stats li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .dataset-stats li::before {
+            content: '\f0c8';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        .dataset-sources h4, .dataset-chart h4 {
+            margin-bottom: 1rem;
+        }
+        
+        .feature-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-category h4 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .feature-list {
+            padding-left: 1.5rem;
+        }
+        
+        .feature-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-note {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .performance-highlight {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .performance-highlight:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .highlight-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .highlight-content h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .highlight-content p {
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+        
+        .documentation-links {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .documentation-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .documentation-links a {
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 0.75rem;
+            border-radius: 5px;
+            background-color: #f8fafc;
+            transition: background-color 0.3s ease;
+        }
+        
+        .documentation-links a:hover {
+            background-color: #e5e7eb;
+        }
+        
+        .documentation-links i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        .integration-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .integration-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .integration-list i {
+            width: 24px;
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .api-example {
+            margin: 1.5rem 0;
+        }
+        
+        .api-example h4 {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+        
+        .code-block {
+            background-color: #1f2937;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            white-space: pre;
+        }
+        
+        .workshop-implementation {
+            margin-top: 1.5rem;
+        }
+        
+        .implementation-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .implementation-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .implementation-content h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .implementation-content p {
+            margin-bottom: 0;
+        }
+        
+        .try-demo-banner {
+            background-color: #f8fafc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .try-demo-banner h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .try-demo-banner p {
+            margin-bottom: 0;
+        }
+    </style>
+
+    <!-- Bootstrap and custom JavaScript -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
